@@ -17,13 +17,14 @@ attr_accessor :sides
     elsif sides.length == 3 && @sides.all? { |e| e > 0  }
       return :scalene
     else
-      raise TriangleError
-    end
+      begin
+         raise PartnerError
+       rescue PartnerError => error
+           puts error.message
+       end
   end
 
   class TriangleError < StandardError
-
-
 
   end
 
