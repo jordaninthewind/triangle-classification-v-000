@@ -14,8 +14,8 @@ attr_accessor :side1, :side2, :side3
       return :equilateral
     elsif sides.length == 2 && @sides.all? { |e| e > 0  }
       return :isosceles
-    # elsif
-    #   return :scalene
+    elsif sides.length == 3 && @sides.all? { |e| e > 0  }
+      return :scalene
     # else
     #   raise error
     end
