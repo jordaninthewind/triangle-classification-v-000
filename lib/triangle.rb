@@ -10,11 +10,12 @@ attr_accessor :sides
 
   def kind
     sides = @sides.uniq
-    if sides.length == 1 && @sides.all? { |e| e > 0  }
+    sorted = @sides.sorted
+    if sides.length == 1 && @sides.all? { |e| e > 0  } && sorted[0] + sorted[1] < sorted[2]
       return :equilateral
-    elsif sides.length == 2 && @sides.all? { |e| e > 0  }
+    elsif sides.length == 2 && @sides.all? { |e| e > 0  } && sorted[0] + sorted[1] < sorted[2]
       return :isosceles
-    elsif sides.length == 3 && @sides.all? { |e| e > 0  }
+    elsif sides.length == 3 && @sides.all? { |e| e > 0  } && sorted[0] + sorted[1] < sorted[2]
       return :scalene
     else
       # begin
