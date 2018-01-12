@@ -10,7 +10,7 @@ attr_accessor :sides
 
   def kind
     sides = @sides.uniq
-    if sides.length == 1 && @sides.all? { |e| e > 0  }
+    if sides.length == 1 && @sides.all? { |e| e > 0  } && @sides[0] + @sides[1] < @sides[2]
       return :equilateral
     elsif sides.length == 2 && @sides.all? { |e| e > 0  }
       return :isosceles
