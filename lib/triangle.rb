@@ -22,12 +22,13 @@ attr_accessor :sides
       rescue PartnerError => error
         puts error.message
        end
+    end
   end
 
   class TriangleError < StandardError
     def message
       "This is not a valide triangle."
-  end
+    end
 
 
 end
