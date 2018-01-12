@@ -10,7 +10,7 @@ attr_accessor :sides
 
   def kind
     sides = @sides.uniq
-    # sorted = @sides.sorted
+
     if sides.length == 1 && @sides.all? { |e| e > 0  }
       return :equilateral
     elsif sides.length == 2 && @sides.all? { |e| e > 0  }
@@ -18,11 +18,7 @@ attr_accessor :sides
     elsif sides.length == 3 && @sides.all? { |e| e > 0  }
       return :scalene
     else
-      # begin
-        raise TriangleError
-      # rescue TriangleError => error
-      #   puts error.message
-      # end
+      raise TriangleError
     end
   end
 end
