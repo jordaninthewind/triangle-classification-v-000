@@ -18,14 +18,15 @@ attr_accessor :sides
       return :scalene
     else
       begin
-         raise PartnerError
-       rescue PartnerError => error
-           puts error.message
+        raise PartnerError
+      rescue PartnerError => error
+        puts error.message
        end
   end
 
   class TriangleError < StandardError
-
+    def message
+      "This is not a valide triangle."
   end
 
 
