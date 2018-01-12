@@ -21,7 +21,7 @@ attr_accessor :sides
         raise PartnerError
       rescue PartnerError => error
         puts error.message
-       end
+      end
     end
   end
 
