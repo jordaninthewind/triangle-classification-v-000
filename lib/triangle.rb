@@ -9,7 +9,7 @@ attr_accessor :side1, :side2, :side3
   end
 
   def kind
-    if 
+    if
       return :equilateral
     # elsif
     #   return :isosceles
@@ -20,6 +20,9 @@ attr_accessor :side1, :side2, :side3
     end
   end
 
+class TriangleError < StandardError
+ # triangle error code
+end
 
 
 end
