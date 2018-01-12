@@ -29,6 +29,6 @@ attr_accessor :sides
     def message
       "This is not a valide triangle."
     end
-
+  end
 
 end
