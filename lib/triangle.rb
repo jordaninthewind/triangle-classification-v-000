@@ -17,7 +17,7 @@ attr_accessor :side1, :side2, :side3
     elsif sides.length == 3 && @sides.all? { |e| e > 0  }
       return :scalene
     else
-      raise error
+      raise TriangleError
     end
   end
 
