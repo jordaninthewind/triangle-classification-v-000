@@ -16,7 +16,7 @@ attr_accessor :sides
     binding.pry
     if sides.length == 1 && @sides.all? { |e| e > 0  }
       return :equilateral
-    elsif sides.length == 2 && @sides.all? { |e| e > 0  }
+    elsif sides.length == 2 && @sides.all? { |e| e > 0  } && valid
       return :isosceles
     elsif sides.length == 3 && @sides.all? { |e| e > 0  } && valid
       return :scalene
