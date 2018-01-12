@@ -18,7 +18,7 @@ attr_accessor :sides
       return :equilateral
     elsif sides.length == 2 && @sides.all? { |e| e > 0  }
       return :isosceles
-    elsif sides.length == 3 && @sides.all? { |e| e > 0  }
+    elsif sides.length == 3 && @sides.all? { |e| e > 0  } && valid
       return :scalene
     else
       raise TriangleError
