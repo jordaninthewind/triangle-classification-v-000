@@ -21,11 +21,11 @@ attr_accessor :side1, :side2, :side3
     end
   end
 
-class TriangleError < StandardError
+  class TriangleError < StandardError
 
 
 
-end
+  end
 
 
 end
